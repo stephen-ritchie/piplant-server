@@ -1,0 +1,21 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'core/css/bootstrap.min.css' %}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      {% include "core/flashed_messages.html" %}
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script src="{% static 'core/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/js/messages.js' %}"></script>
+  </body>
+</html>
